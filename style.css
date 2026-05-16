@@ -58,6 +58,7 @@ nav a:hover {
     padding: 2rem;
     max-width: 900px;
     margin: auto;
+
     background-image:
     linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
@@ -69,6 +70,28 @@ nav a:hover {
     100% 100%;
 }
 
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(37,99,235,0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at top right,
+            rgba(37,99,235,0.15),
+            transparent 35%
+        );
+
+    pointer-events: none;
+}
 
 .hero h1 {
     font-size: 3rem;
