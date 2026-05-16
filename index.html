@@ -7,27 +7,467 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+<nav>
+    <h2>Eric Sutton</h2>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 <body>
 
-    <nav>
-        <h2>Eric Sutton</h2>
+    <nav></nav>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="hero" id="home">
 
-    <header class="hero">
-        <h1>Developer | Supply Chain Professional | Problem Solver</h1>
+        <h1>Eric Sutton</h1>
+
+        <h2>
+            Developer | Supply Chain Professional | Problem Solver
+        </h2>
 
         <p>
             I build practical software solutions that help businesses
-            work smarter and streamline operations.
+            work smarter, streamline operations, and make better decisions.
         </p>
+
+        <p>
+            After 15+ years in manufacturing and supply chain operations, I returned to school to pursue Computer Science and 
+            combine real-world operational experience with software development. Today, I specialize in building tools that improve 
+            efficiency, organization, and decision-making for small businesses and operations teams.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+
     </header>
+
+    <section id="about">
+
+        <h1>About Me</h1>
+
+        <p>
+            Thanks for dropping by, I’m Eric Sutton. My journey has been an interesting one. It only took me 20 years after 
+            graduating high school to figure out what I wanted to do with my life, which is why you’re now here, checking 
+            out my portfolio. I have a diverse selection of skills and experiences that make me the perfect fit for helping 
+            your business improve.
+        </p>
+
+        <p>
+           After a failed initial attempt at college right after high school, I started my career as a general operator at a 
+           manufacturing facility for a Fortune 500 company. I technically didn’t even work for the company, initially, I was a 
+           contractor running material handling equipment (fork trucks, in particular). Once I was hired by said company, I spent the 
+           next 12 years manufacturing components for electronic components. Yes, that’s correct, we made the parts that are used to make 
+           the parts to make electronics.
+        </p>
+
+        <p>
+            From there, I moved into the supply chain side of things, scheduling the very machines I used to work on. Since 2022, 
+            I’ve ridden the waves of supply and demand, sometimes feeling like those waves were crushing, others like I was the king 
+            of the world (cue Celine). I’ve earned my CPIM (Certification in Planning and Inventory Management) from APICS and decided 
+            that a single course wasn’t enough torture, so I returned to college to pursue a degree in Computer Science.
+        </p>
+
+        <p>
+            And now, you’ve come to my little corner of the interwebs to see some of the fruits of my labor.
+        </p>
+
+        <p>
+            My grandfather was one of the most influential men in my life. He spent most of his life creating businesses to address 
+            needs in the community around him. From spreading joy and laughter as a clown and magician to repairing bicycles to providing 
+            delicious sustenance with road-side BBQ and a catering business, he showed me the importance of having passion, knowledge, and 
+            the guts to pursue your dreams.
+        </p>
+
+        <p>
+            I also had the privilege of seeing, first-hand, the difficulties and stresses of running your own business, which is something 
+            I want to help alleviate. My desire is to create custom software solutions to help make the life of a small business owner just 
+            a little bit easier.
+        </p>
+
+        <p>
+            I’ll leave you with a quote from the greatest quarterback of all time (Josh Allen): “Do good, be good, God bless, and Go Bills!”
+        </p>
+
+    </section>
+
+    <section id="projects">
+
+        <h1>Projects</h1>
+
+        <!-- PharmaStock -->
+        <div class="project-card">
+
+            <h2>PharmaStock</h2>
+
+            <div class="project-gallery">
+                <img src="images/PharmaLogin.jpg">
+                <img src="images/PharmaDashboard.jpg">
+                <img src="images/PharmaReports.jpg">
+            </div>
+
+            <h4>Inventory Management System for Local Pharmacies</h4>
+
+            <p>
+                Built with Angular, TypeScript, HTML/CSS, and .NET,
+                PharmaStock is a full-stack inventory management application
+                designed to help local pharmacies track inventory,
+                expiration dates, and stock levels more efficiently.
+            </p>
+
+            <h5>Highlights</h5>
+
+            <ul>
+                <li>Full-stack web application</li>
+                <li>REST API integration</li>
+                <li>SQL database integration</li>
+                <li>Authentication & role-based access</li>
+                <li>Inventory tracking & reporting</li>
+            </ul>
+
+        </div>
+
+        <!-- ChopIt -->
+        <div class="project-card">
+
+            <h2>ChopIt</h2>
+
+            <img
+                src="images/ChopItRan.jpg"
+                alt="ChopIt Solution"
+                class="project-image"
+            >
+
+            <h4>2D Cutting Stock Optimization Tool</h4>
+
+            <p>
+                Built with Python, ChopIt is a 2D cutting stock optimizer
+                designed to reduce material waste and improve cutting
+                efficiency for manufacturing and fabrication workflows.
+                The application calculates optimized cutting layouts based
+                on user-defined dimensions and material constraints.
+            </p>
+
+            <h5>Highlights</h5>
+
+            <ul>
+                <li>Optimization and algorithmic problem solving</li>
+                <li>Material utilization calculations</li>
+                <li>Custom layout generation</li>
+                <li>Python-based logic and data processing</li>
+                <li>Manufacturing-focused workflow design</li>
+            </ul>
+
+        </div>
+
+        <!-- PatternOptimizer -->
+        <div class="project-card">
+
+            <h2>PatternOptimizer</h2>
+
+            <img
+                src="images/PatternOptimizerRan.jpg"
+                alt="PatternOptimizer Solution"
+                class="project-image"
+            >
+
+            <h4>1D Cutting Stock Solver</h4>
+
+            <p>
+                PatternOptimizer is a Python application that solves
+                1D cutting stock problems by generating efficient cut
+                patterns to minimize scrap and maximize material usage.
+                The project focuses on mathematical optimization and
+                production-planning concepts commonly used in
+                manufacturing environments.
+            </p>
+
+            <h5>Highlights</h5>
+
+            <ul>
+                <li>Cutting stock optimization algorithms</li>
+                <li>Production planning concepts</li>
+                <li>Efficient pattern generation</li>
+                <li>Data processing and logic development</li>
+                <li>Manufacturing and operations applications</li>
+            </ul>
+
+        </div>
+
+        <!-- Scoundrel -->
+        <div class="project-card">
+
+            <h2>Scoundrel</h2>
+
+            <div class="project-gallery">
+                <img src="images/ScoundrelMidGame.jpg">
+                <img src="images/ScoundrelDefeat.jpg">
+                <img src="images/ScoundrelVictory.jpg">
+            </div>
+
+            <h4>Python-Based Solitaire Card Game</h4>
+
+            <p>
+                Scoundrel is a digital adaptation of the solitaire-style
+                dungeon card game built with Python. The project focuses
+                on game-state management, turn-based logic, and
+                interactive gameplay systems.
+            </p>
+
+            <h5>Highlights</h5>
+
+            <ul>
+                <li>Game-state and logic management</li>
+                <li>Turn-based gameplay systems</li>
+                <li>Object-oriented programming</li>
+                <li>Python application development</li>
+                <li>Interactive command-line gameplay</li>
+            </ul>
+
+        </div>
+
+        <!-- Chompr -->
+        <div class="project-card">
+
+            <h2>Chompr</h2>
+
+            <div class="project-gallery">
+                <img src="images/ChomprDashboard.jpg">
+                <img src="images/ChomprPantry.jpg">
+            </div>
+
+            <h4>Android Calorie Tracker & Meal Planning Application</h4>
+
+            <p>
+                Built with Kotlin for Android, Chompr is a mobile
+                nutrition and meal-planning application designed to
+                help users track calories, monitor macronutrients,
+                and organize meals more efficiently.
+            </p>
+
+            <p>
+                The app includes barcode scanning, meal planning tools,
+                shopping list generation, and Firebase integration for
+                authentication and cloud-based data storage.
+            </p>
+
+            <h5>Highlights</h5>
+
+            <ul>
+                <li>Android mobile application development</li>
+                <li>Kotlin programming</li>
+                <li>Firebase authentication and database integration</li>
+                <li>Barcode scanning integration</li>
+                <li>Calorie and macronutrient tracking</li>
+                <li>Meal planning functionality</li>
+                <li>Shopping cart and grocery list generation</li>
+                <li>Mobile UI and user-focused design</li>
+                <li>Cloud-based user data management</li>
+                <li>Data organization and tracking systems</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <section id="skills">
+
+        <h1>Skills</h1>
+
+        <div class="skills-grid">
+
+            <div>
+                <h3>Languages</h3>
+
+                <p>
+                    C# • Python • TypeScript • SQL • Kotlin • C++
+                </p>
+            </div>
+
+            <div>
+                <h3>Frontend</h3>
+
+                <p>
+                    Angular • HTML/CSS • Responsive Design
+                </p>
+            </div>
+
+            <div>
+                <h3>Backend & Databases</h3>
+
+                <p>
+                    .NET • REST APIs • Firebase • SQL Server
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="experience">
+
+        <h1>Experience</h1>
+
+        <div class="experience-card">
+
+            <h3>Asset Scheduler</h3>
+
+            <h4>Fortune 500 Manufacturing Facility | 2022 – Present</h4>
+
+            <p>
+                Managed production scheduling, inventory planning,
+                and operational workflows in a high-demand
+                manufacturing environment.
+            </p>
+
+            <ul>
+                <li>Production planning & scheduling</li>
+                <li>Inventory management & analytics</li>
+                <li>Cross-functional coordination</li>
+                <li>Process improvement initiatives</li>
+                <li>ERP and data-driven decision making</li>
+            </ul>
+
+        </div>
+
+        <div class="experience-card">
+
+            <h3>Manufacturing Operations</h3>
+
+            <h4>Fortune 500 Manufacturing Facility | 2010 – 2022</h4>
+
+            <p>
+                Worked in high-volume manufacturing operations,
+                producing precision components for the electronics industry.
+            </p>
+
+            <ul>
+                <li>Equipment operation & workflow execution</li>
+                <li>Lean manufacturing principles</li>
+                <li>Process consistency & quality standards</li>
+                <li>Team collaboration in production environments</li>
+            </ul>
+
+        </div>
+
+        <div class="experience-card">
+
+            <h3>Computer Science Student</h3>
+
+            <h4>2023 – Present</h4>
+
+            <p>
+                Returned to college to pursue Computer Science with
+                a focus on software development, business systems,
+                and operational problem solving.
+            </p>
+
+            <ul>
+                <li>Full-stack web development</li>
+                <li>Object-oriented programming</li>
+                <li>Database systems</li>
+                <li>Mobile application development</li>
+                <li>Software architecture & APIs</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <section id="services">
+
+        <h1>Services</h1>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+
+                <h3>Custom Business Software</h3>
+
+                <p>
+                    Web and desktop applications designed to streamline
+                    workflows, improve organization, and automate
+                    repetitive tasks.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <h3>Inventory & Operations Tools</h3>
+
+                <p>
+                    Solutions focused on inventory tracking,
+                    reporting, production planning,
+                    and operational visibility.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <h3>Data & Reporting Solutions</h3>
+
+                <p>
+                    Dashboards, reporting systems,
+                    and analytics tools using SQL,
+                    Power BI, and custom APIs.
+                </p>
+
+            </div>
+
+            <div class="service-card">
+
+                <h3>Process Optimization</h3>
+
+                <p>
+                    Software-driven solutions that reduce waste,
+                    improve efficiency, and support smarter
+                    operational decision making.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <p>
+            Email:
+            <a href="mailto:saracat2012@gmail.com">
+                saracat2012@gmail.com
+            </a>
+        </p>
+
+        <p>
+            GitHub:
+            <a href="https://github.com/saracat2012">
+                github.com/saracat2012
+            </a>
+        </p>
+
+        <p>
+            LinkedIn:
+            <a href="www.linkedin.com/in/eric-sutton-26100a216" target="_blank">
+                www.linkedin.com/in/eric-sutton-26100a216
+            </a>
+        </p>
+
+    </section>
+
+</body>
+
 
 </body>
 </html>
