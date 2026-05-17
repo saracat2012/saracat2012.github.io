@@ -6,6 +6,7 @@
     <title>Eric Sutton | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
 <nav>
@@ -285,25 +286,45 @@
             <div>
                 <h3>Languages</h3>
 
-                <p>
-                    C# • Python • TypeScript • SQL • Kotlin • C++
-                </p>
+                <div class="badge-group">
+
+                    <span class="skill-badge">C#</span>
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">TypeScript</span>
+                    <span class="skill-badge">SQL</span>
+                    <span class="skill-badge">Kotlin</span>
+                    <span class="skill-badge">C++</span>
+
+                </div>
             </div>
 
             <div>
                 <h3>Frontend</h3>
 
-                <p>
-                    Angular • HTML/CSS • Responsive Design
-                </p>
+                <div class="badge-group">
+
+                    <span class="skill-badge">Angular</span>
+                    <span class="skill-badge">HTML/CSS</span>
+                    <span class="skill-badge">Responsive Design</span>
+                    
+
+                </div>
+
             </div>
 
             <div>
                 <h3>Backend & Databases</h3>
 
-                <p>
-                    .NET • REST APIs • Firebase • SQL Server
-                </p>
+                <div class="badge-group">
+
+                    <span class="skill-badge">.NET</span>
+                    <span class="skill-badge">RESTful APIs</span>
+                    <span class="skill-badge">Firebase</span>
+                    <span class="skill-badge">SQL Server</span>
+                    <span class="skill-badge">Docker</span>
+
+                </div>
+
             </div>
 
         </div>
@@ -500,7 +521,11 @@
                     ></textarea>
 
                     <button type="submit">
-                        Send Message
+                        <span class="button-text">
+                            Send Message
+                        </span>
+
+                        <span class="spinner hidden"></span>
                     </button>
 
                 </form>
@@ -529,8 +554,17 @@
             const button =
                 form.querySelector("button");
 
+            const spinner =
+                button.querySelector(".spinner");
+
+            const buttonText =
+                button.querySelector(".button-text");
+
             button.disabled = true;
-            button.innerText = "Sending...";
+
+            spinner.classList.remove("hidden");
+
+            buttonText.innerText = "Sending...";
 
             try {
 
@@ -558,7 +592,10 @@
             }
 
             button.disabled = false;
-            button.innerText = "Send Message";
+
+            spinner.classList.add("hidden");
+
+            buttonText.innerText = "Send Message";
         });
 
         function showMessage(message, type) {
@@ -586,6 +623,82 @@
         }
 
     </script>
+
+    <script>
+
+        const sections =
+            document.querySelectorAll("section, header");
+
+        const navLinks =
+            document.querySelectorAll("nav a");
+
+        window.addEventListener("scroll", () => {
+
+            let current = "";
+
+            sections.forEach(section => {
+
+                const sectionTop =
+                    section.offsetTop - 120;
+
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+
+                link.classList.remove("active");
+
+                if (
+                    link.getAttribute("href") ===
+                    `#${current}`
+                ) {
+                    link.classList.add("active");
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+
+        const reveals =
+            document.querySelectorAll(
+                ".project-card, .experience-card, .service-card, .skills-card, .skills-grid > div, .contact-info, .contact-form-wrapper"
+            );
+
+        const observer =
+            new IntersectionObserver(entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+
+            }, {
+                threshold: 0.15
+            });
+
+        reveals.forEach(item => {
+
+            item.classList.add("reveal");
+
+            observer.observe(item);
+        });
+
+    </script>
+
+    <footer>
+
+        <p>
+            © 2026 Eric Sutton.
+            Built with HTML, CSS, JavaScript, and caffeine.
+        </p>
+
+    </footer>
 
 </body>
 </html>
